@@ -1,0 +1,36 @@
+<section id="hadeth" class="section">
+
+
+
+  <h2 class="h2-title ">
+    أحــــاديـــــث
+  </h2>
+
+
+  <label for="countries"
+    class="block  text-start lg:text-center mt-16  text-[20px] lg:text-3xl font-medium text-green-500 mb-5">
+    اخـــتــــر الامــــام</label>
+  <select id="countries" [(ngModel)]="Imam" (change)="selectChange()"
+    class=" border mx-auto border-green-300 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full lg:w-[70%] p-2.5 ">
+    @for (name of Names; track $index) {
+    <option [value]="name">{{name}}</option>
+    }
+  </select>
+
+  <div class="hadeth-buttons  ">
+    @if (currentHadethNum!=Hadiths.length-1) {
+
+    <button class="next-btn btn " (click)="nextHadith()">الـــتـــالـــي</button>
+    }
+    @if (currentHadethNum!=0) {
+    <button class="prev-btn btn " (click)="prevHadith()">الـــســـابــــق</button>
+    }
+  </div>
+  <div class="hadeth-content hver mt-5">
+    <p class=" mt-1 tracking-wider text-slate-500">{{currentHadethText}}
+    </p>
+    <span class="hadeth-span">{{currentHadethNum+1}}-{{Hadiths.length}}</span>
+  </div>
+
+
+</section>

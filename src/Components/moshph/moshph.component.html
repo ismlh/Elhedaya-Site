@@ -1,0 +1,48 @@
+<section id="moshph" class="section relative">
+
+  <h2 class="h2-title text-xl lg:text-2xl">الــــقـــرأن الــــكـــريـــم</h2>
+  <div class="container flex flex-wrap justify-center">
+    @for (suarh of suarhs; track $index;let idx=$index) {
+    <div class="suarh-content hver text-[16px] md:text-xl  " (click)="showPopup(idx+1)">
+      <p>{{suarh.surahNameArabic}}</p>
+      <p>{{suarh.surahName}}</p>
+      <p>عدد الايات: {{suarh.totalAyah}}</p>
+
+      @if (suarh.revelationPlace) {
+      <p>مكان النزول:مكة</p>
+      }
+      @else{
+      <p>مكان النزول:المدينة</p>
+      }
+    </div>
+
+    }
+
+  </div>
+
+</section>
+
+<!-- Modal toggle -->
+
+
+<!-- Main modal -->
+<div id="default-modal" tabindex="-1" aria-hidden="true"
+  class="overflow-y-auto  overflow-x-hidden fixed inset-0 z-50 hidden">
+  <div class="relative p-4 w-[90%] mx-auto max-h-screen overflow-y-auto">
+    <!-- Modal content -->
+    <div class="p-4 bg-white rounded-lg shadow-xl text-slate-900 font-bold">
+      <!-- Modal body -->
+      <button type="button" (click)="closePopup()"
+        class="text-sm p-4 rounded-lg ms-auto sticky top-0 right-0  inline-flex justify-center items-center border shadow-2xl"
+        data-modal-hide="default-modal">
+        <i class="fa-solid fa-x"></i>
+      </button>
+
+      <div class="model-content   p-10">
+        @for (ayah of ayahs; track $index) {
+        <p class="border-b-2 text-center pb-2 p-3  border-green-500">{{ayah}}</p>
+        }
+      </div>
+    </div>
+  </div>
+</div>

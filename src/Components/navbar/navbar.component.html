@@ -1,0 +1,33 @@
+<div
+  class="nav container  absolute top-0 z-10 left-0 right-0   mx-auto  items-center text-white    flex  justify-between p-2">
+  <div class="logo font-mono text-3xl font-bold p-3 lg:p-0">
+    الـمـوعظـــة
+  </div>
+  <ul class="links  ">
+    <li class="link  active "><a (click)="navToSection('Home')">الـصفـحـة الـرئـيـسـيـة</a></li>
+    <li class="link  hover:active"><a (click)="navToSection('hadeth')">أحـاديـث</a></li>
+    <li class="link  hover:active"><a (click)="navToSection('moshph')">القران الكـريـم</a></li>
+    <li class="link  hover:active"><a (click)="navToSection('prayer-time')">أوقــات الصــلاة</a></li>
+    <li class="link  hover:active"><a (click)="navToSection('footer')"> تـواصـل مـعـنـا</a></li>
+  </ul>
+
+  <button class="block lg:hidden p-1 " (click)="showNav()">
+    @if (isMenu) {
+    <i class="fa-solid fa-bars text-xl "></i>
+    }
+    @else {
+    <i class="fa-solid fa-x text-white  "></i>
+    }
+  </button>
+
+</div>
+@if(!isMenu){
+<div
+  class="  absolute top-0 left-0  flex lg:hidden  text-white flex-col items-end  mt-12 shadow-2xl w-full   mx-auto p-5">
+  <li class=" list-none mb-2  active mt-8 "><a (click)="navToSection('Home')">الـصفـحـة الـرئـيـسـيـة</a></li>
+  <li class=" list-none my-1  hover:active"><a (click)="navToSection('hadeth')">أحـاديـث</a></li>
+  <li class=" list-none my-1 hover:active"><a (click)="navToSection('moshph')">القران الكـريـم</a></li>
+  <li class="  list-none my-1 hover:active"><a (click)="navToSection('prayer-time')">أوقــات الصــلاة</a></li>
+  <li class=" list-none my-1 hover:active"><a (click)="navToSection('footer')"> تـواصـل مـعـنـا</a></li>
+</div>
+}

@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .active {
+    @apply border-b-2 border-white  hover:scale-110 transition-transform duration-300;
+  }
+  .links {
+    @apply text-xl hidden  lg:flex  p-3;
+  }
+  .link {
+    @apply ml-5 cursor-pointer;
+  }
+  .browsing {
+    @apply bg-black flex items-center gap-x-3
+     bg-transparent border md:text-3xl text-2xl w-fit p-3 hover:text-slate-700 hover:bg-white transition-all duration-1000 ease-in-out;
+  }
+  .content {
+    @apply container mx-auto p-3 text-white md:text-3xl text-2xl space-y-5;
+  }
+  .section {
+    @apply p-12 text-green-500 relative;
+  }
+  .h2-title {
+    @apply text-center text-green-500 text-4xl after:content-[''] after:absolute after:bg-green-500 after:top-24 after:w-44 after:h-[2px] after:left-[50%] after:translate-x-[-50%]
+    before:content-[''] before:absolute before:bg-green-500 before:top-28 before:w-32 before:h-[2px] before:left-[50%] before:translate-x-[-50%];
+  }
+  .hadeth-content {
+    @apply tracking-wider   shadow-lg text-[18px] lg:text-3xl p-16 flex items-center justify-center relative text-[#232323]  mt-14;
+  }
+  .hadeth-buttons {
+    @apply flex justify-between lg:justify-evenly p-3 w-[100%] lg:w-[70%] mx-auto;
+  }
+  .hadeth-span {
+    @apply absolute text-green-600 top-2 left-2 font-bold shadow-lg p-3 lg:p-2 text-[14px] lg:text-[16px] shadow-slate-300;
+  }
+  .btn {
+    @apply bg-green-500 p-3 rounded-full text-[18px]  text-white hover:bg-stone-100 mt-3 hover:text-green-500 transition-all duration-700 font-bold;
+  }
+  .right {
+    @apply w-full lg:w-1/2;
+  }
+  .left {
+    @apply p-3 shadow-sm w-full lg:w-1/2 lg:px-12 py-12 lg:py-2;
+  }
+  .lec {
+    @apply flex justify-around  shadow-md  p-5 items-center cursor-pointer;
+  }
+  .container {
+    @apply mx-auto mt-12  p-5;
+  }
+  .suarh-content {
+    @apply cursor-pointer min-w-[170px] mb-5  p-6  ml-3  text-slate-900 text-xl   shadow-lg flex justify-center items-center flex-col;
+  }
+  .prayer-content {
+    @apply min-h-[200px] flex flex-col p-7 justify-evenly shadow-inner;
+  }
+  .time {
+    @apply h-40 w-40 flex items-center justify-center text-xl font-bold rounded-full bg-white border-green-500 border-[7px] border-r-transparent;
+  }
+  .hver {
+    @apply hover:scale-105 transition-transform duration-700;
+  }
+  .icon {
+    @apply w-14 h-14 lg:w-16 lg:h-16 shadow-2xl shadow-slate-900   flex justify-center items-center text-xl lg:text-2xl rounded-full text-white hover:bg-white hover:text-green-500;
+  }
+}

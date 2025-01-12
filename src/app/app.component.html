@@ -1,0 +1,18 @@
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#d96666" type="square-jelly-box" [fullScreen]="true">
+  <p style="color: white">Loading...</p>
+</ngx-spinner>
+
+
+<app-navbar></app-navbar>
+<app-home></app-home>
+<app-hadeth></app-hadeth>
+<app-lectures></app-lectures>
+<app-moshph></app-moshph>
+<app-prayertime></app-prayertime>
+<app-footer></app-footer>
+@if (isScroll) {
+<button (click)="navToTop()"
+  class="bg-green-500 text-white fixed right-7 bottom-7 w-14 h-14 rounded-full hover:bg-[#e6e3e3] hover:text-green-500">
+  <i class="fa-solid fa-arrow-up"></i></button>
+}
